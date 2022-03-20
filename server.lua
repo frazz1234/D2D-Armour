@@ -8,7 +8,7 @@ ESX.RegisterUsableItem('lightarmour', function(source)
 
 	local _source = source
     local xPlayer = ESX.GetPlayerFromId(_source)
-    xPlayer.removeInventoryItem('lightarmour', 1)
+   -- xPlayer.removeInventoryItem('lightarmour', 1)
 	TriggerClientEvent('D2D-Armor:Light', source)
 	
 end)
@@ -17,7 +17,7 @@ ESX.RegisterUsableItem('mediumarmour', function(source)
 
 	local _source = source
     local xPlayer = ESX.GetPlayerFromId(_source)
-    xPlayer.removeInventoryItem('mediumarmour', 1)
+   -- xPlayer.removeInventoryItem('mediumarmour', 1)
 	TriggerClientEvent('D2D-Armor:Medium', source)
 	
 end)
@@ -26,7 +26,7 @@ ESX.RegisterUsableItem('heavyarmour', function(source)
 
 	local _source = source
     local xPlayer = ESX.GetPlayerFromId(_source)
-    xPlayer.removeInventoryItem('heavyarmour', 1)
+  --  xPlayer.removeInventoryItem('heavyarmour', 1)
 	TriggerClientEvent('D2D-Armor:Heavy', source)
 	
 end)
@@ -35,10 +35,41 @@ ESX.RegisterUsableItem('militaryarmour', function(source)
 
 	local _source = source
     local xPlayer = ESX.GetPlayerFromId(_source)
-    xPlayer.removeInventoryItem('militaryarmour', 1)
+   -- xPlayer.removeInventoryItem('militaryarmour', 1)
 	TriggerClientEvent('D2D-Armor:Military', source)
 	
 end)
+-------------------------------------------------------------
+RegisterServerEvent("armour:light")
+AddEventHandler("armour:light", function()
+    local _source = source
+    local xPlayer = ESX.GetPlayerFromId(_source)
+    xPlayer.removeInventoryItem("lightarmour", 1)
+        
+end)
 
+RegisterServerEvent("armour:medium")
+AddEventHandler("armour:medium", function()
+    local _source = source
+    local xPlayer = ESX.GetPlayerFromId(_source)
+    xPlayer.removeInventoryItem("mediumarmour", 1)
+        
+end)
 
+RegisterServerEvent("armour:heavy")
+AddEventHandler("armour:heavy", function()
+    local _source = source
+    local xPlayer = ESX.GetPlayerFromId(_source)
+    xPlayer.removeInventoryItem('heavyarmour', 1)
+        
+end)
+
+RegisterServerEvent("armour:military")
+AddEventHandler("armour:medium", function()
+    local _source = source
+    local xPlayer = ESX.GetPlayerFromId(_source)
+    xPlayer.removeInventoryItem('militaryarmour', 1)
+        
+end)
 --MADE BY DareToDoyle#3835--
+--modify by frazz--
